@@ -9,6 +9,7 @@
             </div>
             <div class="panel-body">
                 @include('shared._errors')
+
                 <form method="post" action="{{route('login')}}">
                     {{csrf_field()}}
 
@@ -18,7 +19,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="password">密码：</label>
+                        <label for="password">密码（<a href="{{ route('password.request') }}">忘记密码</a>）：</label>
                         <input type="password" name="password" class="form-control" value="{{old('password')}}">
                     </div>
                     <div class="checkbox">
